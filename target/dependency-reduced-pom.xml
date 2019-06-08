@@ -151,6 +151,18 @@
           <plugin>
             <artifactId>maven-jar-plugin</artifactId>
             <version>3.1.1</version>
+            <executions>
+              <execution>
+                <id>default-jar</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+                <configuration>
+                  <outputDirectory>C:\Users\serge\Desktop\Nukkit\plugins</outputDirectory>
+                </configuration>
+              </execution>
+            </executions>
             <configuration>
               <outputDirectory>C:\Users\serge\Desktop\Nukkit\plugins</outputDirectory>
             </configuration>

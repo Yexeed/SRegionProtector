@@ -354,7 +354,7 @@ public final class RegionEventsHandler implements Listener {
 
     //item drop flag
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
-    public void playerDropItem(PlayerDropItemEvent e) { //item drop
+    public void playerDropItem(PlayerDropItemEvent e) {
         this.handleEvent(RegionFlags.FLAG_ITEM_DROP, e.getPlayer(), e.getPlayer(), e);
     }
 
@@ -407,6 +407,7 @@ public final class RegionEventsHandler implements Listener {
         for (Region region : chunk.getRegions()) {
             if (!region.getFlagState(RegionFlags.FLAG_CHUNK_LOADER)) continue;
             e.setCancelled();
+            break;
         }
     }
 
